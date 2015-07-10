@@ -11,7 +11,7 @@
 |
 */
 
-$factory->define(App\User::class, function ($faker) {
+$factory->define('App\User', function ($faker) {
     return [
         'name' => $faker->name,
         'email' => $faker->email,
@@ -20,9 +20,15 @@ $factory->define(App\User::class, function ($faker) {
     ];
 });
 
-$factory->define(App\Post::class, function ($faker) {
+$factory->define('App\Post', function ($faker) {
     return [
         'title' => $faker->sentence,
         'content' => $faker->paragraph
+    ];
+});
+
+$factory->define('App\Tag', function ($faker) {
+    return [
+        'name' => $faker->word
     ];
 });
